@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  color: white; /* Ensures all body text is white */
+  color: white; /* All body text is white */
 }
 
 /* === Headings === */
@@ -87,7 +87,7 @@ button:hover,
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  color: white;
+  color: black; /* Final result text is black */
   word-break: break-word;
 }
 
@@ -121,11 +121,16 @@ body.dark-mode textarea,
 body.dark-mode input,
 body.dark-mode button,
 body.dark-mode .btn,
-body.dark-mode .glass-btn,
-body.dark-mode .output {
+body.dark-mode .glass-btn {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #e0e0e0;
+}
+
+body.dark-mode .output {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: black; /* Final result text stays black in dark mode */
 }
 
 body.dark-mode textarea::placeholder,
