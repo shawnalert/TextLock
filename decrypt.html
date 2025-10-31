@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decrypt Text</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Decrypt Text</h1>
+    <textarea id="encryptedText" placeholder="Enter encrypted text"></textarea>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="decryptText()">Decrypt</button>
+    <div id="result" class="output"></div>
+    <div class="button-group">
+      <button onclick="copyToClipboard()">Copy</button>
+      <button onclick="shareText()">Share</button>
+    </div>
+  </div>
+  <script src="crypto.js"></script>
+</body>
+</html>
