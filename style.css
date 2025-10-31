@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  color: white; /* Ensures all body text is white */
 }
 
 /* === Headings === */
@@ -32,7 +33,8 @@ h1 {
 }
 
 /* === Inputs and Textareas === */
-textarea, input {
+textarea,
+input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -40,12 +42,21 @@ textarea, input {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  color: white;
+  color: white; /* Typed text */
   font-size: 16px;
 }
 
+/* === Placeholder Text === */
+textarea::placeholder,
+input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
 /* === Buttons === */
-button, .btn, .glass-btn {
+button,
+.btn,
+.glass-btn {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -62,7 +73,9 @@ button, .btn, .glass-btn {
   margin: 5px;
 }
 
-button:hover, .btn:hover, .glass-btn:hover {
+button:hover,
+.btn:hover,
+.glass-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: scale(1.05);
 }
@@ -84,7 +97,10 @@ button:hover, .btn:hover, .glass-btn:hover {
 }
 
 /* === Link Styling === */
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: white;
   text-decoration: none;
 }
@@ -92,6 +108,7 @@ a:link, a:visited, a:hover, a:active {
 /* === Dark Mode === */
 body.dark-mode {
   background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #e0e0e0;
 }
 
 body.dark-mode h1,
@@ -109,6 +126,11 @@ body.dark-mode .output {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #e0e0e0;
+}
+
+body.dark-mode textarea::placeholder,
+body.dark-mode input::placeholder {
+  color: black;
 }
 
 /* === Optional: Switch === */
